@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Visualizaciones de campo eléctrico y magnético</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>Visualizaciones de campo eléctrico y magnético</h1>
+    <ul>
+      <li><a href="#puntual_charges">Cargas Puntuales</a></li>
+      <li><a href="#straight_wires">Hilos Infinitos de Corriente</a></li>
+      <li><a href="#straight_wires_old">Hilos Infinitos de Corriente (antiguo)</a></li>
+      <li><a href="#solenoid">Solenoide</a></li>
+    </ul>
+    <script>
+      window.addEventListener('hashchange', showVisualization);
+
+      function showVisualization() {
+        var hash = window.location.hash.substr(1);
+        switch (hash) {
+          case 'puntual_charges':
+            window.location.href = 'puntual_charges.html';
+            break;
+          case 'straight_wires':
+            window.location.href = 'straight_wires.html';
+            break;
+          case 'straight_wires_old':
+            window.location.href = 'straight_wires_old.html';
+            break;
+          case 'solenoid':
+            window.location.href = 'solenoid.html';
+            break;
+          default:
+            break;
+        }
+      }
+      showVisualization();
+    </script>
+  </body>
+</html>
